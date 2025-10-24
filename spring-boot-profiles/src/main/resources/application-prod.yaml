@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: spring-boot-profiles-prod
+
+app:
+  name: spring-boot-backend [prod]
+  description: Application with prod yaml file
+
+logging:
+  level:
+    root: warn

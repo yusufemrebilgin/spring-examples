@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-boot-profiles-dev
+
+app:
+  name: spring-boot-backend [dev]
+  description: Application with dev yaml file
+
+logging:
+  level:
+    root: info
+    com.example: debug
