@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-boot-filters
+
+filter:
+  request-logging:
+    enabled: true
+    order: -1
+    name: customRequestLoggingFilter
+    url-patterns:
+      - /api/v1/*
+      - /test/*
