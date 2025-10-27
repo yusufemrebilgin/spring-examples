@@ -1,0 +1,4 @@
+jsonplaceholder:
+  client:
+    enabled: true
+    base-url: https://jsonplaceholder.typicode.com
