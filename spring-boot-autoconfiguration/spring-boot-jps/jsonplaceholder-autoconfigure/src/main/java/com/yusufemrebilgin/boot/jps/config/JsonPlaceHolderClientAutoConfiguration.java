@@ -11,7 +11,7 @@ import org.springframework.web.client.RestClient;
 
 @AutoConfiguration
 @EnableConfigurationProperties(JsonPlaceHolderClientProperties.class)
-@ConditionalOnProperty(name = "jsonplaceholder.client", havingValue = "true", matchIfMissing = true)
+@ConditionalOnProperty(name = "jsonplaceholder.client.enabled", havingValue = "true")
 public class JsonPlaceHolderClientAutoConfiguration {
 
     @Bean

@@ -14,7 +14,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class JsonPlaceHolderClientAutoConfigurationTest {
 
     private final ApplicationContextRunner contextRunner = new ApplicationContextRunner()
-            .withConfiguration(AutoConfigurations.of(JsonPlaceHolderClientAutoConfiguration.class));
+            .withConfiguration(AutoConfigurations.of(JsonPlaceHolderClientAutoConfiguration.class))
+            .withPropertyValues("jsonplaceholder.client.enabled:true");
 
 
     @Test
@@ -31,7 +32,7 @@ class JsonPlaceHolderClientAutoConfigurationTest {
             assertThat(context).hasSingleBean(JsonPlaceHolderClient.class);
             JsonPlaceHolderClient bean = context.getBean(JsonPlaceHolderClient.class);
             assertThat(bean).isSameAs(context.getBean("anotherJsonPlaceHolderClient"));
-            // Autoconfiguration bean not created due to @ConditionalOnMissingBean
+            // Autoconfiguration bean isn't created due to @ConditionalOnMissingBean
             assertThat(context).doesNotHaveBean("jsonPlaceHolderClient");
             // RestClient bean still created (not conditional)
             assertThat(context).hasBean("jsonPlaceHolderRestClient");
