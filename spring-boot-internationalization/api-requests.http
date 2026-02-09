@@ -1,0 +1,16 @@
+### GET current locale info
+GET http://localhost:8080/api/v1/current-locale
+
+### GET greeting with language header
+GET http://localhost:8080/api/v1/greetings
+Accept-Language: tr
+
+### Send POST request for user record validation failure
+POST http://localhost:8080/api/v1/users
+Content-Type: application/json
+Accept-Language: tr
+
+{
+  "email": "invalid-email-format",
+  "password": ""
+}

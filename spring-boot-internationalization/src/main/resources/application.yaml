@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: spring-boot-internationalization
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
+    cache-duration: 3600s
+    fallback-to-system-locale: false
